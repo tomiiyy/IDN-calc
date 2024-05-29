@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <h1>Calculator Luas Segitiga</h1>
+        <p>Dibuat dengan HTML dn Javascript</p>
+        <hr>
+        <label for="alas">Alas :</label>
+        <input id="a" type="number" placeholder="Masukkan Alas">
+        <br>
+        <label for="tinggi">Tinggi :</label>
+        <input id="t" type="number" placeholder="Masukkan Tinggi">
+        <br>
+        <br>
+        <button onclick="luasSegitiga()">Hitung Luas Segitiga</button>
+        <span id="luas"></span>
+    </div> 
+
+    <Script>
+        function luasSegitiga() {
+            var alas = document.getElementById('a').value;
+            var tinggi = document.getElementById('t').value;
+            var luas =(1/2 * alas * tinggi);
+
+            document.getElementById('luas').innerHTML = ' luas segitiga dengan alas $(alas) cm dan tinggi $(tinggi) cm adalah $(luas) cm<sup>2</sup>';
+        }
+    </Script>
+</body>
+</html>
